@@ -18,6 +18,8 @@
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 		
 
 		
@@ -435,7 +437,7 @@ img {vertical-align: middle;
                 <h2 style="color:white",font-family="sans-serif"> Please input your details for creating a Congratulation page...</h2>
 
  
-    <form id="congratulation" method="" name="congratulation" action="" netlify>   
+    <form id="congratulation" method="post" name="congratulation" action="" netlify>   
 
       <label style="color :white;"for="fileToUpload">Upload Candidate Photo</label>
       <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg,.png" required>
@@ -559,13 +561,9 @@ $('#basicSlider').multislider({
 </script>
 
 <script>
-$(document)
-.on('click', 'form button[type=submit]', function(e) {
-    var isValid = $(e.target).parents('form').isValid();
-    if(!isValid) {
-      e.preventDefault(); //prevent the default action
-    }
-});
+$(document).ready(function() {
+$("#congratulation").validate();
+})
 </script>
 
 
