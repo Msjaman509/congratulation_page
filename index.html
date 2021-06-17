@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		
 
 		
@@ -544,6 +544,7 @@ $('#basicSlider').multislider({
 			interval: 3000
 		});
 </script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
 </body>
 <script type="text/javascript">
 
@@ -574,7 +575,7 @@ $(function() {
       // of an input field. Validation rules are defined
       // on the right side
       name: "required",
-      organization: "required",
+      organization: "required"
       email: {
         /*required: true,
         // Specify that email should be validated
@@ -584,18 +585,18 @@ $(function() {
       password: {
         required: true,
         minlength: 5
-      }
-    },*/
+      }*/
+    },
     // Specify validation error messages
     messages: {
       name: "Please enter your firstname",
-      organization: "Please enter your lastname",
+      organization: "Please enter your lastname"
       /*password: {
         required: "Please provide a password",
         minlength: "Your password must be at least 5 characters long"
       },
-      email: "Please enter a valid email address"
-    },*/
+      email: "Please enter a valid email address"*/
+    },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
