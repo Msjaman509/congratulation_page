@@ -559,12 +559,14 @@ $('#basicSlider').multislider({
 </script>
 
 <script>
-function validateForm() {
-  var x = document.forms["congratulation"]["name"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+$(document)
+.on('click', 'form button[type=submit]', function(e) {
+    var isValid = $(e.target).parents('form').isValid();
+    if(!isValid) {
+      e.preventDefault(); //prevent the default action
+    }
+});
 </script>
+
+
 </html>	
