@@ -6,6 +6,9 @@
 		<title>
 			Dinabandhu Andrews Institute Of Technology And Management
 		</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css" >
+    
 		
 		<link rel = "icon" href =  "headerlogo.jpg" 
         type = "image/x-icon"> 
@@ -18,8 +21,6 @@
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		
 
 		
@@ -28,7 +29,7 @@
 
 		
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif; color: white !important; font-weight: bold !important; }
@@ -44,7 +45,7 @@ img {vertical-align: middle;
 
 .slideshow-container {
 	padding-top: 5px;
-	max-width: 1000px;
+	max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -72,11 +73,8 @@ img {vertical-align: middle;
 }
 
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 @-webkit-keyframes fade {
@@ -255,32 +253,32 @@ img {vertical-align: middle;
 <div class="slideshow-container">
 
 	<div class="mySlides fade">
-		<img src="images/slider/ll1.jpg" width="100%"  >
+		<img src="./images/slider/ll1.jpg" width="100%"  >
 	  
 	</div>
 	
 	<div class="mySlides fade">
-		<img src="images/slider/ll2.jpg" width="100%">
+		<img src="./images/slider/ll2.jpg" width="100%">
 	  
 	</div>
 	
 	<div class="mySlides fade">
-		<img src="images/slider/ll3.jpg" width="100%">
+		<img src="./images/slider/ll3.jpg" width="100%">
 	  
 	</div>
 	
 	<div class="mySlides fade">
-		<img src="images/slider/ll4.jpg" width="100%">
+		<img src="./images/slider/ll4.jpg" width="100%">
 	  
 	</div>
 	
 	<div class="mySlides fade">
-		<img src="images/slider/ll5.jpg" width="100%">
+		<img src="./images/slider/ll5.jpg" width="100%">
 	  
 	</div>
 	
 	<div class="mySlides fade">
-		<img src="images/slider/ll6.jpg" width="100%">
+		<img src="./images/slider/ll6.jpg" width="100%">
 	  
 	</div>
 	
@@ -437,17 +435,18 @@ img {vertical-align: middle;
                 <h2 style="color:white",font-family="sans-serif"> Please input your details for creating a Congratulation page...</h2>
 
  
-    <form id="congratulation" method="post" name="congratulation" action="" netlify>   
+</form>
+    <form id="congratulation" method="" name="congratulation" action="congratulation.html" >   
 
       <label style="color :white;"for="fileToUpload">Upload Candidate Photo</label>
-      <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg,.png" required>
-	  
+      <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg,.png" required >
+
 							
 
-                    <label style="color:white" for="name">Name:</label>
-                    <input type="text" pattern="[a-zA-Z'-'\s]*" id="name" class="frm-input" name="name" placeholder="Type your name"  required />
-					
-                    <label style="color:white" for="stream">Stream:</label>
+                    <label style="color:white" for="name">Name:</label><br>
+                    <input type="text"        pattern="[a-zA-Z'-'\s]*" id="name" class="frm-input" name="name" placeholder="Type your name" autofocus   required>
+					<br>
+                    <label style="color:white" for="stream">Stream:</label><br>
                     
 					<select name="stream" id="stream" class="frm-input" required>
 					 <option  selected="true" disabled="disabled" value="">Select Stream</option>
@@ -458,13 +457,13 @@ img {vertical-align: middle;
 					 <option value="M.Sc in Computer Science">M.Sc in Computer Science</option>
 					 <option value="M.Sc in Applied Mathematics">M.Sc in Applied Mathematics</option>
 					</select>
-					
-                    <label style="color:white" for="organization">Organization:</label>
-                    <input type="text" id="organization" class="frm-input" name="organization" placeholder="Type name of organization" required  />
-					
-                   <label style="color:white" for="session">Session:</label>
+					<br>
+                    <label style="color:white" for="organization">Organization:</label><br>
+                    <input type="text" id="organization" class="frm-input" name="organization" placeholder="Type name of organization" autofocus   required>
+					<br>
+                   <label style="color:white" for="session">Session:</label><br>
                   
-					<select name="session" id="session" class="frm-input mb-2" required >
+					<select name="session" id="session" class="frm-input mb-2"  required>
 					 <option  selected="true" disabled="disabled" value="">Select Campusing</option>
 					 <option value="2016-2017">2016-2017</option>
 					 <option value="2017-2018">2017-2018</option>
@@ -488,7 +487,14 @@ img {vertical-align: middle;
                   <input type="reset" name="Reset" value="Reset" class="submit_button float_left" />
     </form >
             </div> 
-		</div><br><br><br><br><br><br><br><br>
+		</div>
+    
+    <div class="container-fluid bg-warning pl-5 error mt-3 pl-4 pr-4" style="color :#252525; font-weight :700; font-size:x-large; display : none;   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
+    ">
+      <h4 class="errorText"></h4>
+    </div>
+    
+    <br><br><br><br><br><br><br><br>
 		<div class="banner-footer"><p1>Our Recruiters</p1>
 		<div id="basicSlider">
     <div class="MS-content">
@@ -544,7 +550,6 @@ $('#basicSlider').multislider({
 			interval: 3000
 		});
 </script>
-<script src="vendor/jquery/dist/jquery.min.js"></script>
 </body>
 <script type="text/javascript">
 
@@ -560,53 +565,4 @@ $('#basicSlider').multislider({
   })();
 
 </script>
-
-<script>
-$
-
-// Wait for the DOM to be ready
-$(function() {
-  // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
-  $("form[name='congratulation']").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      name: "required",
-      organization: "required"
-      email: {
-        /*required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
-      },
-      password: {
-        required: true,
-        minlength: 5
-      }*/
-    },
-    // Specify validation error messages
-    messages: {
-      name: "Please enter your firstname",
-      organization: "Please enter your lastname"
-      /*password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
-      },
-      email: "Please enter a valid email address"*/
-    },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
-});
-
-
-</script>
-
-
 </html>	
